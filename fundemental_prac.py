@@ -16,7 +16,7 @@ x = 50
 my_first_name = "John"
 
 ### Print the type of the variables in step 1
-print("name is " + type(name))
+print("name is " + type(name))                          #Print Name of variable + type
 print("age is " + type(age))
 print("salary is " + type(salary))
 print("plays_basketball is " + type(plays_basketball))
