@@ -93,3 +93,46 @@ del tv_characters["Anne Boonchuy"]
 del tv_characters["Lake"]
 del shoes_and_inventory["Converse"]
 del shoes_and_inventory["Jordan 1"]
+
+# Lab 4
+# Create a function that adds 2 menu prices from menu
+def total_price(*foodItems):
+
+        """Returns the total price of a given food"""
+        foodItems = list(foodItems)
+
+        for item in foodItems:                          # Check if items are on the menu
+                if item not in menu:
+                        return "Error: One or more of the foods is not on the menu"
+
+        # Calculate the total
+        total = 0
+        for item in foodItems:
+                total = menu[item]
+        
+        # Return the price of the items combined based on the menu
+        to_be_returned = "The total price of "
+
+        for item in foodItems:
+                to_be_returned += item
+                if(item != foodItems[-1]):
+                        to_be_returned += " and "
+        
+        to_be_returned += " "
+        to_be_returned += str(total)
+        to_be_returned += "."
+
+        return to_be_returned    
+
+def price_difference(foodItem1 = "NA", foodItem2 = "NA"):
+        
+        """Returns the price difference between 2 foods"""
+
+        if(foodItem1 == "NA" or foodItem1 == "NA"):
+                return "Error: One or more food items not listed"
+        elif ((foodItem1 not in menu) or (foodItem2 not in menu)):
+                return "Error: One or more food items is not in menu"
+        
+        difference = menu[foodItem1] - menu[foodItem2]
+
+        return abs(difference)
