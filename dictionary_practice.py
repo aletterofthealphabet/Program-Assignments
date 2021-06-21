@@ -144,5 +144,5 @@ def restock(shoe_name, multiplier):
 
 def clearance(shoe_name, discount):
         salePrice = shoes_and_inventory[shoe_name] / discount
-        shoes_and_inventory[show_name] = salePrice
+        shoes_and_inventory[shoe_name] = salePrice
         return shoes_and_inventory
