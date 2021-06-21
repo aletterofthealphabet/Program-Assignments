@@ -48,10 +48,37 @@ def printList(name_of_list):
     """Prints all the values in a selected list"""
 
     temp_counter = 0
-    while (temp_counter < len(name_of_list)):
+    
+    while temp_counter < len(name_of_list):
         print(str(temp_counter) + ": " + str(name_of_list[temp_counter]))   # Results in index : value
         temp_counter += 1
 
     return "Program successfully executed"
 
 printList(city_names)
+
+# Print out all the city_names organized by city name length
+# Make a function called orginized_cities
+# Create a temporary list to store
+# use a loop to access everything in the list
+# Use conditionals to figure out which order, check the length
+# I.E.
+#   if length of listitem[n] < length of listitem[n + 1]
+#   pivot = length of listItem[n + 1]
+#   append to tempList
+#   remove listItem[n + 1]
+# Return organized list
+
+def organized_cities(name_of_list):
+    counter = 0
+
+    for i in range(len(name_of_list) - 1):
+        if(name_of_list[i] > name_of_list[i - 1]):
+            counter += 1
+        else:
+            temp = name_of_list.pop(i)
+            name_of_list.append(temp)
+
+    return name_of_list
+
+print(organized_cities(city_names))
