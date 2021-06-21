@@ -136,3 +136,13 @@ def price_difference(foodItem1 = "NA", foodItem2 = "NA"):
         difference = menu[foodItem1] - menu[foodItem2]
 
         return abs(difference)
+
+def restock(shoe_name, multiplier):
+        newInv = shoes_and_inventory[shoe_name] * multiplier
+        shoes_and_inventory[shoe_name] = newInv
+        return shoes_and_inventory
+
+def clearance(shoe_name, discount):
+        salePrice = shoes_and_inventory[shoe_name] / discount
+        shoes_and_inventory[show_name] = salePrice
+        return shoes_and_inventory
