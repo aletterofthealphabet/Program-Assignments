@@ -37,3 +37,21 @@ city_names.insert(7, "D.C.")
 city_names.pop(0)                   # Removes San Francisco
 del city_names[7]                   # Removes D.C
 city_names.remove("Tampa")
+
+# Loop Practice
+# Using a function
+# Print out all the values in city_names
+# Using a while loop to update index
+# Make sure that index is less than list length
+
+def printList(name_of_list):
+    """Prints all the values in a selected list"""
+
+    temp_counter = 0
+    while (temp_counter < len(name_of_list)):
+        print(str(temp_counter) + ": " + str(name_of_list[temp_counter]))   # Results in index : value
+        temp_counter += 1
+
+    return "Program successfully executed"
+
+printList(city_names)
